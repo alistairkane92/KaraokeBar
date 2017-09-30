@@ -57,9 +57,10 @@ class Rooms < Guests
     end
 
     def permit_guest(name_of_guest)
+
         while max_capacity != true && name_of_guest.money > @entry_fee
             @guests << name_of_guest
-            name_of_guest.money == name_of_guest.money - @entry_fee
+            name_of_guest.pay_entry_fee
         end
     end
 

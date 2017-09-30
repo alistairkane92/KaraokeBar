@@ -23,8 +23,8 @@ class Guests
         @held_drinks
     end
 
-
-
-
+    def pay_entry_fee
+        @money -= @entry_fee
+    end
 
 end
