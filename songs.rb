@@ -10,5 +10,4 @@ class Songs
         return @name
     end
 
-
 end

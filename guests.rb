@@ -4,6 +4,7 @@ class Guests
         @name = name
         @money = money
         @fav_song = fav_song
+        @held_drinks = []
     end
 
     def name
@@ -16,6 +17,10 @@ class Guests
 
     def fav_song
         return @fav_song
+    end
+
+    def held_drinks
+        @held_drinks
     end
 
 

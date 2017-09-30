@@ -3,7 +3,6 @@ require 'minitest/rg'
 
 require_relative '../guests'
 
-
 class TestGuests < MiniTest::Test
 
     def setup
@@ -24,7 +23,6 @@ class TestGuests < MiniTest::Test
     def test_fav_song
         assert_equal("Bohemian Rhapsody", @guest3.fav_song)
     end
-
 
 
 

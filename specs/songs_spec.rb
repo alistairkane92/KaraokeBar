@@ -16,6 +16,6 @@ class TestSongs < MiniTest::Test
     def test_return_song_name
         assert_equal("Purple Rain", @song2.name)
     end
-    
+
 
 end
