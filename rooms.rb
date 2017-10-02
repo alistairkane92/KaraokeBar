@@ -1,7 +1,6 @@
 require "pry-byebug"
-require_relative "guests"
 
-class Rooms < Guests
+class Rooms
 
     def initialize(name, guests, playlist, room_capacity)
         @name = name
@@ -35,6 +34,14 @@ class Rooms < Guests
         end
     end
 
+    def name
+        return @name
+    end
+
+    def name_of_guests
+        return @guests
+    end
+
     def add_song_to_playlist(song_to_add)
         @playlist << song_to_add
     end
@@ -58,9 +65,9 @@ class Rooms < Guests
 
     def permit_guest(name_of_guest)
 
-        while max_capacity != true && name_of_guest.money > @entry_fee
+        if max_capacity != true && name_of_guest.money >= @entry_fee
             @guests << name_of_guest
-            name_of_guest.pay_entry_fee
+            pay_entry_fee(name_of_guest)
         end
     end
 
@@ -79,6 +86,10 @@ class Rooms < Guests
     def money_taken
         total_fees = @entry_fee * @guests.length
         return total_fees
+    end
+
+    def pay_entry_fee(guest)
+        guest.set_money(@entry_fee)
     end
 
 end

@@ -23,8 +23,7 @@ class Guests
         @held_drinks
     end
 
-    def pay_entry_fee
-        @money -= @entry_fee
+    def set_money(amount)
+        @money -= amount
     end
-
 end

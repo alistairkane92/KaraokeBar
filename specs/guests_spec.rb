@@ -27,11 +27,4 @@ class TestGuests < MiniTest::Test
         assert_equal("Bohemian Rhapsody", @guest3.fav_song)
     end
 
-
-    def test_paid_entry
-        @guest1.pay_entry_fee
-
-        assert_equal(40, @guest1.money)
-    end
-
 end
